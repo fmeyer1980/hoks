@@ -1,0 +1,31 @@
+.site-head {
+  border-bottom: solid 1px get-color('light');
+  padding-top: get-size('300');
+  padding-bottom: get-size('300');
+
+  &__inner-wrapper{
+    margin: 0 calc(-1 * #{get-size('100')});
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__brand{
+    margin: 0.2rem get-size('100');
+  }
+
+  &__main-nav{
+    margin: 0.2rem get-size('100');
+
+    &__list{
+      display: flex;
+      flex-wrap: wrap;
+      @include apply-utility('text-transform', 'up');
+      margin: 0 calc(-1 * #{get-size('100')});
+      li{
+        margin: 0.2rem get-size('100');
+      }
+    }
+  }
+}

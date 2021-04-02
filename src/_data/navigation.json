@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "title": "Cases",
+      "slug": "/"
+    },
+    {
+      "title": "Magento",
+      "slug": "/"
+    },
+    {
+      "title": "Webudvikling",
+      "slug": "/"
+    },
+    {
+      "title": "Bureauet",
+      "slug": "/"
+    },
+    {
+      "title": "Kontakt",
+      "slug": "/"
+    }
+  ]
+}

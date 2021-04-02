@@ -1,0 +1,16 @@
+<header class="site-head container">
+    <div class="site-head__inner-wrapper">
+        <a class="site-head__brand" aria-label="{{ site.name }}" href="/">
+            {{ '/src/_includes/partials/svg/logo.svg' | svgContents(" fill-current stroke-current h-500 sm:h-300") | safe }}
+        </a>
+        <nav class="site-head__main-nav flow-left flow-space-100 [ text-200 sm:text-100 ]" aria-label="Primary navigaton">
+            <ul class="site-head__main-nav__list">
+                {% for item in navigation.items %}
+                    <li>
+                        <a class="" {% if item.slug == page.url %} noprefetch {% endif %} {{ helpers.getLinkActiveState(item.slug, page.url) | safe }} href="{{ item.slug }}">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>

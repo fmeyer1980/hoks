@@ -1,0 +1,17 @@
+<section class="featured-services [ flow ]">
+    <p class="[ text-600 weight-light ]">{{ home.featuredServices.headline }}</p>
+    <ul class="featured-services__list [ auto-grid ] [ grid-size-mid auto-grid-gap-900 ]">
+        {% for item in home.featuredServices.list %}
+            <li class="featured-services__list__item">
+                {% if item.icon %}
+                    {{ item.icon | safe }}
+                {% endif %}
+                <div class="content [ flow flow-space-200 ]">
+                    <h2 class="[ text-400 ]">{{ item.title }}</h2>
+                    <p class="[ opc-80 ]">{{ item.summary }}</p>
+                    <a href="/{{ item.slug.current }}/">Læs mere</a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</section>

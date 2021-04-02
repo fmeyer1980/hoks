@@ -1,0 +1,44 @@
+<section class="intro [ flow ] [ pt-900 ]">
+    <div class="intro__inner-wrapper">
+        <div class="image-wrapper">
+            {% if home.intro.image.asset %}
+                <img
+                    width="1140"
+                    height="760"
+                    sizes="(min-width: 48rem) 50vw, 90vw"
+                    src="{% croppedUrlFor home.intro.image, 480, 320 %}"
+                    srcset="{% croppedUrlFor home.intro.image, 480, 320 %} 480w,
+                    {% croppedUrlFor home.intro.image, 768, 512 %} 768w,
+                    {% croppedUrlFor home.intro.image, 992, 661 %} 992w,
+                    {% croppedUrlFor home.intro.image, 1140, 760 %} 1140w,
+                    {% croppedUrlFor home.intro.image, 1400, 933 %} 1400w"
+                    alt="{{ home.intro.image.alt }}"
+                />
+            {% endif %}
+        </div>
+        <div class="content [ flow ] [ flow-space-500 ]">
+            <h1 class="[ text-700 ]">{{ home.intro.headline }}</h1>
+            <p class="[ text-400 weight-light opc-80 ]">{{ home.intro.text }}</p>
+            <div class="">
+                <a class="btn" data-type="secondary" href="/">Magento 2</a>
+                <a class="btn" data-type="primary" href="/">Cases</a>
+            </div>
+        </div>
+    </div>
+    <div class="intro__logos [ flow-left ] [ pt-700 pb-700 ]">
+        <ul class="flow-left">
+            {% for item in home.intro.logos %}
+                <li class="[ opc-80 ] {{ item.iconSize }}">
+                    {{ item.logo | safe }}
+                </li>
+            {% endfor %}
+        </ul>
+        <ul class="[ flow-left ]">
+            {% for item in home.intro.logos %}
+                <li class="{{ item.iconSize }}">
+                    {{ item.logo | safe }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

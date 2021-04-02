@@ -1,0 +1,18 @@
+<section class="featured-cases [ full-bleed ]">
+    <ul class="featured-cases__list [ reel flow-left ] [ ml-container flow-space-400 ]" data-type="full-width">
+        {% for item in home.featuredCases %}
+        <li class="featured-cases__list__item [ w-4-5 md:w-major mb-400 ]">
+            <a class="[ image-overlay ] [ mb-300 ]" aria-label="{{ item.name }}" href="/cases/{{ item.slug.current }}/">
+                {% if item.mainImage.asset %}
+                    <img class="[ w-full ]" width="500" height="400" loading="lazy" srcset="{% croppedUrlFor item.mainImage, 500, 400 %} 1x, {% croppedUrlFor item.mainImage, 1000, 800 %} 2x" alt="{{ site.cta.imageAlt }}" src="{% croppedUrlFor item.mainImage, 500, 400 %}" alt="{{ item.mainImage.alt }}">
+                {% endif %}
+            </a>
+            <div class="content [ flow ] [ flow-space-xxs pr-400 text-200 ]">
+                <h3>{{ item.name }}</h3>
+                <p class="[ opc-80 ]">{{ item.summary }}</p>
+                <a href="/cases/{{ item.slug.current }}/">Se case</a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</section>

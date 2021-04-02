@@ -1,0 +1,36 @@
+.featured-cases {
+   position: relative;
+
+   &__list {
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+
+            > a{
+                overflow: hidden;
+
+                img{
+                    transition: transform 50s cubic-bezier(0, 0.1, 0.05, 0.99);
+                }
+            }
+
+            &:hover{
+                img {
+                    transform: scale(1.4);
+                }
+            }
+
+            .content{
+                display: flex;
+                flex-direction: column;
+
+                a{
+                    align-self: flex-start;
+                }
+            }
+        }
+        
+   }
+
+}

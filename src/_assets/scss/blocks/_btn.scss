@@ -1,0 +1,31 @@
+.btn {
+  display: inline-flex;
+  color: inherit;
+  @include apply-utility('font', 'heading');
+  @include apply-utility('text-transform', 'up');
+  // @include apply-utility('weight', 'bold');
+  line-height: 1;
+  transition: background-color, color, 0.2s ease-in-out;
+  align-items: center;
+  font-size: get-size('200');
+  padding: 1em 2em 0.9em;
+
+  &[data-type='primary'] {
+    background-color: get-color('primary');
+    color: get-color('light-glare');
+    &:hover {
+      background-color: get-color('primary-shade');
+      color: get-color('light-glare');
+    }
+  }
+
+  &[data-type='secondary'] {
+    background-color: transparent;
+    color: get-color('dark-shade');
+    box-shadow: inset 0px 0px 0px 2px get-color('dark-shade');
+    &:hover {
+      color: get-color('primary');
+      box-shadow: inset 0px 0px 0px 2px get-color('primary');
+    }
+  }
+}
