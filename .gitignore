@@ -1,5 +1,3 @@
 node_modules
 dist
 .env
-src/_includes/css
-src/_includes/js
