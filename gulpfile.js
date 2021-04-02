@@ -18,11 +18,11 @@ gulp.task('goron', function () {
   return gulp.src('./src/_includes/css/tokens.css')
     .pipe(purgecss({
       content: [
-        './src/**/*.html'
+        './dist/**/*.html'
       ],
       defaultExtractor: content => content.match(/[A-Za-z0-9-:/]+/g) || []
     }))
-    .pipe(gulp.dest('./src/_includes/css/'));
+    .pipe(gulp.dest('./dist/_includes/css/'));
 });
 
 gulp.task('build', gulp.parallel(
