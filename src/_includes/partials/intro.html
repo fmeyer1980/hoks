@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="intro__logos [ flow-left ] [ pt-700 pb-700 ]">
-        <ul class="flow-left">
+        <ul class="[ flow-left ]">
             {% for item in home.intro.logos %}
             <li class="{% if item.iconSize == "h-300" %}h-300{% elif item.iconSize == "h-400" %}h-400{% elif item.iconSize == "h-500" %}h-500{% elif item.iconSize == "h-600" %}h-600{% elif item.iconSize == "h-700" %}h-700{% endif %}">
                     {{ item.logo | safe }}
