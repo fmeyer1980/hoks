@@ -18,7 +18,7 @@ gulp.task('goron', function () {
   return gulp.src('./src/_includes/css/tokens.css')
     .pipe(purgecss({
       content: [
-        './dist/**/*.html'
+        './src/**/*.html'
       ],
       defaultExtractor: content => content.match(/[A-Za-z0-9-:/]+/g) || []
     }))
